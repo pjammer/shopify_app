@@ -8,7 +8,7 @@ class ShopifyAppGenerator < Rails::Generators::Base
   class_option :use_foundation, :type => :boolean, :default => false, :desc => 'pass true to use foundation instead of bootstrap'
 
   def self.source_root
-    if options[:use_foundation]
+    if self.options[:use_foundation]
       File.join(File.dirname(__FILE__), 'foundation/templates')
     else
       File.join(File.dirname(__FILE__), 'bootstrap/templates')
