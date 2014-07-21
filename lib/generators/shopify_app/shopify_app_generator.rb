@@ -40,7 +40,7 @@ class ShopifyAppGenerator < Rails::Generators::Base
   def add_bootstrap_gem
     gem_group :development, :test do
       if options[:use_foundation]
-        gem "foundation"
+        gem "foundation-rails"
       else
         gem "less-rails-bootstrap"
         gem 'therubyracer', :platforms => :ruby
